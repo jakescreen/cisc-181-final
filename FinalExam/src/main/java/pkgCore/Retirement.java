@@ -25,14 +25,14 @@ public class Retirement {
 	public double MonthlySavings() {
 
 		//TODO: Calculate AmountToSave
-		double pmt = 0; // <-- this should be fixed to calculate the real pmt
+		double pmt = Math.abs(Math.round(Retirement.PMT(dAnnualReturnRetired / 12, iYearsRetired * 12, this.TotalAmountToSave(), 0, false) * 100.0) / 100.0); // <-- this should be fixed to calculate the real pmt
 		return pmt;
 	}
 
 	public double TotalAmountToSave() {
 		
 		//TODO: Calculate the Total Amount Requried to save
-		double pv = 0;
+		double pv = Math.round(Math.abs(Retirement.PV(dAnnualReturnRetired / 12, iYearsRetired * 12, dRequiredIncome - dMonthlySSI, 0, false)) *100.0) / 100.0;
 		//	Hint: Here's how to round a number: pv = Math.round(pv * 100.0) / 100.0;
 		return pv;
 	}
@@ -53,6 +53,7 @@ public class Retirement {
 		//	f = Future value
 		//	t = boolean... when interest is calculated... we're going to use FALSE
 		return FinanceLib.pv(r, n, y, f, t);
+		//Retirement.PV(dAnnualReturnRetired / 12, iYearsRetired * 12, dRequiredIncome - dMonthlySSI, 0, false);
 	}
 
 	public int getiYearsToWork() {

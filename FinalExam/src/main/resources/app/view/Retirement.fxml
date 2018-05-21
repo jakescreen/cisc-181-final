@@ -10,8 +10,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgApp.controller.RetirementController">
+<BorderPane id="bPane" fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgApp.controller.RetirementController">
    <bottom>
       <HBox prefHeight="35.0" prefWidth="410.0" BorderPane.alignment="CENTER">
          <children>
@@ -28,7 +29,10 @@
    <top>
       <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Retirement Calculator" />
+            <Label text="Retirement Calculator" textFill="#ff6161">
+               <font>
+                  <Font name="Trebuchet MS" size="14.0" />
+               </font></Label>
          </children>
       </HBox>
    </top>
@@ -52,22 +56,52 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Save Each Month" />
-            <Label text="Years to Work" GridPane.rowIndex="1" />
-            <Label text="Working Annual Return (%)" GridPane.rowIndex="2" />
-            <Label text="Amount You Need to Save" GridPane.rowIndex="4" />
-            <Label text="Years Retired" GridPane.rowIndex="6" />
-            <Label text="Retired Annual Return (%)" GridPane.rowIndex="7" />
-            <Label text="Required Income" GridPane.rowIndex="8" />
-            <Label text="Monthly SSI" GridPane.rowIndex="9" />
+            <Label text="Save Each Month" textFill="#ff6161">
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font></Label>
+            <Label text="Years to Work" textFill="#ff6161" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font></Label>
+            <Label text="Working Annual Return (%)" textFill="#ff6161" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Cooper Black" size="13.0" />
+               </font></Label>
+            <Label text="Amount You Need to Save" textFill="#ff6161" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Trebuchet MS Bold" size="15.0" />
+               </font></Label>
+            <Label text="Years Retired" textFill="#ff6161" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Cooper Black" size="18.0" />
+               </font></Label>
+            <Label text="Retired Annual Return (%)" textFill="#ff6161" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Trebuchet MS Bold" size="16.0" />
+               </font></Label>
+            <Label text="Required Income" textFill="#ff6161" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Cooper Black" size="18.0" />
+               </font></Label>
+            <Label text="Monthly SSI" textFill="#ff6161" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Cooper Black" size="18.0" />
+               </font></Label>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
                <children>
                   <Button mnemonicParsing="false" onAction="#btnClear" text="Clear">
                      <HBox.margin>
                         <Insets left="5.0" right="5.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Trebuchet MS" size="14.0" />
+                     </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#btnCalculate" text="Calculate" />
+                  <Button mnemonicParsing="false" onAction="#btnCalculate" text="Calculate">
+                     <font>
+                        <Font name="Trebuchet MS" size="14.0" />
+                     </font></Button>
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
